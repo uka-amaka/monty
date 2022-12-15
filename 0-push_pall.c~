@@ -1,0 +1,20 @@
+#define MAX_STACK_SIZE 100
+// Data structure to hold the stack
+int stack[MAX_STACK_SIZE];
+int stack_size = 0;
+void push(int value) {
+  if (stack_size >= MAX_STACK_SIZE) {
+    // Stack is full, do nothing
+    return; 
+  }
+  // Add value to the top of the stack
+  stack[stack_size] = value;
+  stack_size++; 
+}
+void pall() {
+  // Print each value in the stack
+  for (int i = 0; i < stack_size; i++) {
+    printf("%d\n", stack[i]); 
+  }  
+}
+
